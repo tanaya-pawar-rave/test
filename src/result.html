@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Jr FE Challenge</title>
+</head>
+<body>
+    <section id="result-section">
+    <nav class="navbar">
+        <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/SVGs/Logo.svg" width="173" height="20" class="d-inline-block align-top" alt="">
+
+        </a>
+        <div class="my-2 my-lg-0">
+            <img src="assets/SVGs/icn_search.svg" width="40" height="20" class="d-inline-block align-top"
+                alt="">
+            <img src="assets/SVGs/icn_person.svg" width="30" height="20" class="d-inline-block align-top"
+                alt="">
+        </div>
+    </nav>
+</div> 
+        <div class="container">
+            <div class="heading row">
+            <h1>Result</h1>
+        </div>
+        <div class="sub-heading row">
+            <h5>Look at the result below to see the details of the person you're searched for</h5>
+        </div>
+        <div class="result-row">
+        <div class="result-box">
+            <div class="result-content">
+                <div class="result">
+                    <img src="assets/SVGs/icn_person.svg" class="img-result" width="30" height="20" class="d-inline-block align-top"
+                    alt="">
+                </div>
+                <div class="result">
+                 <h2 id="name"></h2>
+                 <p id="description"> </p>
+                 <div class="row">
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h6>Address</h6>
+                        <p id="address">sfas </p>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h6>Phone Numbers</h6>
+                        <p id="number">ggh </p>
+                     </div>
+                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h6>Email</h6>
+                        <p id="email"> </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <h6>Realtives</h6>
+                        <p id="relative"> </p>
+                    </div>
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </section>
+    <section id="email-search" class="result">
+        <div class="container"> 
+            <div class="heading row ">
+                <h1>Can't Find The Right Person</h1>
+            </div>
+            <div class="row sub-heading">
+                <h5><span>Try Again</span> - Make new Search</h5>
+            </div>
+            <div class="row form ">
+                <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-12"> 
+                   
+                        <div class="floating-label">      
+                          <input class="floating-input form-control" type="text" id="email" placeholder=" ">
+                          <span class="highlight"></span>
+                          <label>Email</label>
+                        </div>
+                </div>
+                <div class="btn-div col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <button type="submit"  class=" btn-submit">Go!</button>
+                </div>
+
+
+            </div>
+            <div class="row icon-text ">
+                <div class="img-div">
+                    <img src="assets/SVGs/lock.svg">
+                </div>
+                <div class="text">
+                    <p>Enter Any Email Address. They won't be notified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
+                    <p class="footer-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 link">
+                    <a class="footer-link" href="#">Terms </a>
+                    <a class="footer-link footer-link-last " href="#"> Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script>
+        var des = sessionStorage.getItem("des");
+        document.getElementById('description').innerHTML = des;
+        var fullname = sessionStorage.getItem("name");
+        document.getElementById('name').innerHTML = fullname;
+        var numbers = sessionStorage.getItem("number");
+        document.getElementById('number').innerHTML = numbers.split(",").join(" </br>");
+        var add = sessionStorage.getItem("add");
+        document.getElementById('address').innerHTML = add;
+        var email = sessionStorage.getItem("email");
+        document.getElementById('email').innerHTML = email;
+        var rel = sessionStorage.getItem("relative");
+        document.getElementById('relative').innerHTML = rel.split(",").join(" </br>");
+    </script> 
+</body>
+</html>

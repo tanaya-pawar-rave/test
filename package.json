@@ -1,0 +1,27 @@
+{
+  "name": "jr-fe-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanaya-pawar-rave/jr-fe-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanaya-pawar-rave/jr-fe-challenge/issues"
+  },
+  "homepage": "https://github.com/tanaya-pawar-rave/jr-fe-challenge#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

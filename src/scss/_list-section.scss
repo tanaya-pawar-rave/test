@@ -1,0 +1,78 @@
+#list-section{
+    background-image: linear-gradient(0deg, #E6E6E6 0%, #FFFFFF 100%);
+    .heading{
+        justify-content: center;
+        margin-top: 2rem;
+
+        h2{
+            color:  #004A80 ;
+            font-weight: bold;
+            font-size: 52px;
+            line-height: 70px;
+            margin-bottom: 1.3rem;
+            
+        }
+      
+    }
+    .para{
+        p{
+            font-size: 22px;
+            color: #4A4A4A;
+            letter-spacing: 0;
+            line-height: 30px;
+        }
+    }
+    .list{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    ol {
+        counter-reset: my-awesome-counter;
+        list-style: none;
+        padding-left: 40px;
+      }
+      ol li {
+        margin: 0 0 2rem 0;
+        counter-increment: item;
+        position: relative;
+        font-size: 18px;
+        line-height: 26px;
+        padding: 1rem 2rem;
+      }
+      li h6{
+        color: #004A80 ;
+         font-size: 22px;
+         font-weight: bold;
+          letter-spacing: 0;
+          margin-bottom: 10px;
+      }
+      ol li::before {
+        content: counter(item, decimal);
+        color: #fcd000;
+        font-size: 48px;
+        font-weight: bold;
+        position: absolute;
+        padding: 15px 45px 46px 19px;
+        --size: 35px;
+        left: calc(-1 * var(--size) - 38px);
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+        top: 5px;
+        background: #004A80;
+        border-radius: 50%;
+        text-align: center;
+      
+      }
+    #a {
+        counter-reset:item 0;
+      
+    }
+    #b {
+        counter-reset:item 3;
+      
+    }
+  
+    }
+   
+}

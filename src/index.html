@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Jr FE Challenge</title>
+</head>
+
+<body>
+    <!-- <div class="transparentCover"></div> -->
+    <div class="loading"></div>
+    <section id="email-search">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/SVGs/Logo.svg" width="173" height="20" class="d-inline-block align-top" alt="">
+
+                </a>
+                <div class="my-2 my-lg-0">
+                    <img src="assets/SVGs/icn_search.svg" width="40" height="20" class="d-inline-block align-top"
+                        alt="">
+                    <img src="assets/SVGs/icn_person.svg" width="30" height="20" class="d-inline-block align-top"
+                        alt="">
+                </div>
+            </nav>
+            <div class="heading row ">
+                <h1>Search Any Email Address</h1>
+            </div>
+            <div class="row sub-heading">
+                <h5><span>Start Here</span> - Look up owners name, photos and online profile, See what you find</h5>
+            </div>
+
+            <div class="row form ">
+                <div class="form-group col-lg-10 col-md-10 col-sm-10 col-xs-12"> 
+                   
+                        <div class="floating-label">      
+                          <input class="floating-input form-control" type="email" id="email" placeholder=" " required >
+                          <span class="highlight"></span>
+                          <label id="label" >Email</label>
+                          <label id="error" class="error">Please add a valid email address</label>
+                        </div>
+                </div>
+                <div class="btn-div col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    <button type="submit" onclick="displayResult()" class=" btn-submit">Go!</button>
+                </div>
+
+
+            </div>
+            <div class="row icon-text ">
+                <div class="img-div">
+                    <img src="assets/SVGs/lock.svg">
+                    <span class="text">Enter Any Email Address. They won't be notified</span>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+    <section id="list-section">
+        <div class="container">
+            <div class="heading row">
+                <h2>Reverse Email Lookup</h2>
+            </div>
+            <div class="para row">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="list row ">
+                <div id="a" class="">
+                    <ol>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore
+
+                        </li>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+
+                        </li>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+
+                        </li>
+                    </ol>
+                </div>
+                <div id="b" class="">
+                    <ol>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+
+                        </li>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+
+                        </li>
+                        <li>
+                            <h6> Lorem ipsum</h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
+                    <p class="footer-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 link">
+                    <a class="footer-link" href="#">Terms </a>
+                    <a class="footer-link footer-link-last " href="#"> Privacy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Script tags -->
+    <script src="/js/script.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+       $(function(){
+          // var regExp = /^\w*(\.\w*)?@\w*\.[a-z]+(\.[a-z]+)?$/;
+          var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+  
+          $('[type="email"]').on('keyup', function() {     
+          if(regExp.test( $(this).val() ) ){
+            $('#label').show();
+            $('#error').hide(); 
+            $('.floating-input:focus').css("border", "2px solid #F6BC25");       
+          }
+          if(!(regExp.test( $(this).val()) ) ){
+            $('#label').hide();
+            $('#error').show();
+            $('.floating-input:focus').css("border", "2px solid red");
+
+          }
+          if(document.getElementById("email").value == '') {
+              $('#error').hide(); 
+              $('#label').show(); 
+              $('.floating-input:focus').css("border", "2px solid #F6BC25");
+           }
+          });
+  
+          });
+    </script>
+</body>
+
+</html>
